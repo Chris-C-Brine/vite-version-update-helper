@@ -75,4 +75,4 @@ createRoot(document.getElementById('root')!).render(
 
 Note: Wrap <App/> inside ErrorBoundary
 
-[AAL](./public/LICENSE) © Christopher C. Brine
+[AAL](./dist/LICENSE) © Christopher C. Brine
