@@ -7,6 +7,7 @@ export default defineConfig({
   plugins: [
     react(),
     dts({
+      tsconfigPath: './tsconfig.lib.json',
       insertTypesEntry: true, // Creates a types field reference in dist
       include: ['src/lib'] // Should generate TypeScript definitions automatically
     })
