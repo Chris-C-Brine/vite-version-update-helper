@@ -1,22 +1,25 @@
 {
   "name": "@chris-c-brine/vite-version-update-helper",
-  "private": true,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "files": [
     "dist"
   ],
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
 
   "scripts": {
     "dev": "vite --open",
     "build": "tsc -b && vite build",
+    "build:lib": "tsc && vite build --mode library",
     "lint": "eslint .",
     "preview": "vite preview",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build:lib"
   },
-  "dependencies": {
-    "react": "^19.2.7",
-    "react-dom": "^19.2.7"
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

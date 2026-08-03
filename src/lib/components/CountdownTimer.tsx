@@ -2,11 +2,11 @@ import {useState, useEffect, type JSX} from 'react';
 
 // Define the type for the component props
 interface CountdownTimerProps {
-  initialSeconds: number;
+  duration: number;
 }
 
-export function CountdownTimer({initialSeconds}: CountdownTimerProps): JSX.Element {
-  const [secondsLeft, setSecondsLeft] = useState<number>(initialSeconds);
+export function CountdownTimer({duration}: CountdownTimerProps): JSX.Element {
+  const [secondsLeft, setSecondsLeft] = useState<number>(duration);
 
   useEffect(() => {
     if (secondsLeft <= 0) return;

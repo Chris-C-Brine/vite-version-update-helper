@@ -70,7 +70,7 @@ export class ViteVersionErrorHandler extends Component<Props, State> {
           <h3>Updating application...</h3>
           <p>We are loading the latest version of the app.</p>
           <p>Retrying in <CountdownTimer
-            initialSeconds={Math.floor((bounceRate - errorOccurredAgo) / 1000)}/> seconds...</p>
+            duration={Math.floor((bounceRate - errorOccurredAgo) / 1000)}/> seconds...</p>
         </div>
       );
     }

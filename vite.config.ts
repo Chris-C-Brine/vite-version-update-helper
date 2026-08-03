@@ -12,12 +12,16 @@ export default defineConfig({
     })
   ],
   build: {
+
+    // Empties the dist folder before building
+    emptyOutDir: true,
+
     lib: {
       // Defines the entry point and output configurations
       entry: resolve(__dirname, 'src/lib/index.ts'),
       name: 'ViteVersionUpdateHelper',
-      fileName: (format) => `vite-version-update-helper.${format}.js`,
-      formats: ['es', 'cjs'] // Outputs both ES Modules and CommonJS
+      formats: ['es', 'cjs'], // Outputs both ES Modules and CommonJS
+      fileName: (format) => `index.${format}.js`
     },
     rollupOptions: {
       // Assures peer dependencies are not compiled into your final bundle
