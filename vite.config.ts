@@ -16,6 +16,7 @@ export default defineConfig({
 
     // Empties the dist folder before building
     emptyOutDir: true,
+    sourcemap: true,
 
     lib: {
       // Defines the entry point and output configurations
